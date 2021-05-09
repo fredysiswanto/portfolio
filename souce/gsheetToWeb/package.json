@@ -1,0 +1,14 @@
+{
+  "name": "gsheettoweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fredy siswanto",
+  "license": "ISC",
+  "dependencies": {
+    "googleapis": "^72.0.0"
+  }
+}
