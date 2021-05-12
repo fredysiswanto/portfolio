@@ -2,7 +2,7 @@ const input_text = "Lorem ipsum ipsum ipsum dolor, sit amet consectetur adipisic
 
 function Proses(input) {
   let result = {};
-  const data = {};
+  const data = [];
   input.split(' ').map(val => {
     if (!data.hasOwnProperty(val)) {
       data[val] = 1
@@ -10,17 +10,17 @@ function Proses(input) {
       data[val] = data[val] + 1
     }
   })
+  return data;
+}
 
-  result = Object.entries(data).sort(([, a], [, b]) => b - a);
-  return result;
+function page() {
+  const result = {};
+  const data_text = Proses(input_text);
+  let i = 0;
+  return result
 }
 
 
-function page(input) {
-  const result = input;
-  return result;
-}
 
 
-
-console.log(Proses(input_text))
+console.log(page())
