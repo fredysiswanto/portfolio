@@ -1,42 +1,43 @@
-const quoteContainer = document.getElementById('quote-container');
-const quoteText = document.getElementById('quote');
-const authorText = document.getElementById('author');
+const suratContainer = document.getElementById('surat-container');
+const surahText = document.getElementById('surat');
+const ayat = document.getElementById('span-ayat');
 const twitterBtn = document.getElementById('twitter');
-const newQuoteBtn = document.getElementById('new-quote');
+const newQuoteBtn = document.getElementById('new-ayat');
 const loader = document.getElementById('loader');
 
 let apiQuotes = [];
+let surahResult = {};
 
 function loading() {
   loader.hidden = false;
-  quoteContainer.hidden = true;
+  suratContainer.hidden = true;
 }
 
 function complate() {
   loader.hidden = true;
-  quoteContainer.hidden = false;
+  suratContainer.hidden = false;
 }
 
 // show new quote
 function newQoute() {
 
   loading();
-  const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
-  (!quote.author) ? authorText.textContent = 'Unknown': authorText.textContent = quote.author;
+  surahText.textContent = surahResult.id.teks;
+  ayat.textContent = `Qs. ${surahResult.id.surat} : ${surahResult.id.ayat}`;
 
-  (quote.text.length < 140) ? quoteText.classList.add('long-quote'): quoteText.classList.remove('long-quote');
-  quoteText.textContent = quote.text;
   complate()
 }
 
 
 //get quotes
-async function getQuotes(params) {
+async function getQuotes() {
   loading()
-  const apiUrl = 'https://type.fit/api/quotes';
+  const apiUrl = 'https://api.banghasan.com/quran/format/json/acak';
   try {
     const response = await fetch(apiUrl);
     apiQuotes = await response.json();
+    surahResult = apiQuotes.acak
+    // console.log(apiQuotes);
     newQoute()
   } catch (error) {
     console.log(error);
