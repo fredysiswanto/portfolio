@@ -1,9 +1,0 @@
-@media only screen and (max-width: 500px) {
-  #gambar {
-    display: none;
-    /* position: absolute;
-    top: 100px;
-    right: -5em;
-    z-index: -0; */
-  }
-}
