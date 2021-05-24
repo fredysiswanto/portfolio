@@ -1,6 +1,6 @@
 <template>
   <header-component />
-  <main-component />
+  <main-component> </main-component>
   <footer-component />
   <router-view></router-view>
 </template>
@@ -12,6 +12,9 @@
   export default {
     name: "App",
     components: { HeaderComponent, FooterComponent, MainComponent },
+    data() {
+      return {};
+    },
   };
 </script>
 <style>

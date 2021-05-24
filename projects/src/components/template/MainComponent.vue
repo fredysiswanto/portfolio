@@ -1,5 +1,7 @@
 .<template>
-  <main class="flex-shrink-0"></main>
+  <main class="flex-shrink-0">
+    <h1>{{ content }}</h1>
+  </main>
 </template>
 
 <script>
