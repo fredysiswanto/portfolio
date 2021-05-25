@@ -1,24 +1,41 @@
 <template>
   <div class="projects">
-    <div v-for="project in listProject" :key="project.id">
-      <h2>{{ project.title }}</h2>
+    <img src="../assets/logo.png" />
+    <div v-for="project in listProjects" :key="project.id">
+      <img :src="project.img" :alt="project.judul" />
     </div>
   </div>
 </template>
 
 <script>
   export default {
-    name: "Projects",
+    neme: "Projects",
+
     data() {
       return {
-        listProject: [
-          { id: 1, title: "projects 1", part: "./project1" },
-          { id: 2, title: "projects 2", part: "./project2" },
-          { id: 3, title: "projects 3", part: "./project3" },
+        listProjects: [
+          {
+            id: 1,
+            judul: "projects1",
+            ket: "Lorem ipsum dolor sit amet.",
+            img: "../assets/logo.png",
+          },
+          {
+            id: 2,
+            judul: "projects2",
+            ket: "Lorem ipsum dolor sit amet.",
+            img: "../assets/logo.png",
+          },
+          {
+            id: 3,
+            judul: "projects3",
+            ket: "Lorem ipsum dolor sit amet.",
+            img: "../assets/logo.png",
+          },
         ],
       };
     },
   };
 </script>
 
-<style></style>
+<style scoped></style>
