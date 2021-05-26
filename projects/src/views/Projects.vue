@@ -1,41 +1,42 @@
 <template>
-  <div class="projects">
-    <img src="../assets/logo.png" />
-    <div v-for="project in listProjects" :key="project.id">
-      <img :src="project.img" :alt="project.judul" />
+  <div class="container">
+    <div class="row g-0">
+      <CardComponent :listProjects="listProjects"></CardComponent>
     </div>
   </div>
 </template>
 
 <script>
+  import CardComponent from "../components/ui/CardComponent.vue";
   export default {
-    neme: "Projects",
-
+    name: "Projects",
+    components: {
+      CardComponent,
+    },
     data() {
       return {
         listProjects: [
           {
+            judul: "project 1",
+            ket:
+              "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, omnis?",
             id: 1,
-            judul: "projects1",
-            ket: "Lorem ipsum dolor sit amet.",
-            img: "../assets/logo.png",
+            img: require("@/assets/img/300x250.png"),
           },
           {
+            judul: "project 2",
+            ket: "Lorem ipsum dolsectetur adipisicing elit. Magni, omnis?",
             id: 2,
-            judul: "projects2",
-            ket: "Lorem ipsum dolor sit amet.",
-            img: "../assets/logo.png",
+            img: require("@/assets/img/300x250.png"),
           },
           {
+            judul: "project 3",
+            ket: "Lorem ipsum dolor sit, amet consectetur adip, omnis?",
             id: 3,
-            judul: "projects3",
-            ket: "Lorem ipsum dolor sit amet.",
-            img: "../assets/logo.png",
+            img: require("@/assets/img/300x250.png"),
           },
         ],
       };
     },
   };
 </script>
-
-<style scoped></style>
