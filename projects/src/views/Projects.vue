@@ -7,9 +7,9 @@
 </template>
 
 <script>
-  import CardComponent from "../components/ui/CardComponent.vue";
+  import CardComponent from '../components/ui/CardComponent.vue';
   export default {
-    name: "Projects",
+    name: 'Projects',
     components: {
       CardComponent,
     },
@@ -17,23 +17,23 @@
       return {
         listProjects: [
           {
-            judul: "project 1",
+            judul: 'project 1',
             ket:
-              "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, omnis?",
+              'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, omnis?',
             id: 1,
-            img: require("@/assets/img/300x250.png"),
+            img: '../assets/img/300x250.png',
           },
           {
-            judul: "project 2",
-            ket: "Lorem ipsum dolsectetur adipisicing elit. Magni, omnis?",
+            judul: 'project 2',
+            ket: 'Lorem ipsum dolsectetur adipisicing elit. Magni, omnis?',
             id: 2,
-            img: require("@/assets/img/300x250.png"),
+            img: '../assets/img/300x250.png',
           },
           {
-            judul: "project 3",
-            ket: "Lorem ipsum dolor sit, amet consectetur adip, omnis?",
+            judul: 'project 3',
+            ket: 'Lorem ipsum dolor sit, amet consectetur adip, omnis?',
             id: 3,
-            img: require("@/assets/img/300x250.png"),
+            img: '../assets/img/300x250.png',
           },
         ],
       };

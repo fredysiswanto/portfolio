@@ -9,7 +9,7 @@
       <h3>{{ project.judul }}</h3>
     </div>
     <div class="card-body">
-      <img :src="project.img" alt="" />
+      <img :src="require(project.img)" alt="" />
       <p>
         {{ project.ket }}
       </p>
@@ -20,7 +20,7 @@
 
 <script>
   export default {
-    name: "CardComponent",
+    name: 'CardComponent',
     props: {
       listProjects: Array,
     },
